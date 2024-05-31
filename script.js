@@ -10,8 +10,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// VIDEO TOGGLE
-// Legato script
 
 //Refactor, use one function, pass the link
 function toggle() {
@@ -27,19 +25,19 @@ function toggle() {
   );
 }
 // Bandura
-function toggleBandura() {
-  document.getElementById("videoId").src =
-    "https://www.youtube.com/embed/5a2OxN4Cn-s?start=86";
-  var popupVid = document.querySelector(".popupVid");
-
-  popupVid.classList.toggle("active");
-
-  let video = document.getElementById("videoId");
-  video.contentWindow.postMessage(
-    '{"event":"command", "func":"destroy", "args":""}',
-    "*"
-  );
-}
+// function toggleBandura() {
+//   document.getElementById("videoId").src =
+//     "https://www.youtube.com/embed/5a2OxN4Cn-s?start=86";
+//   var popupVid = document.querySelector(".popupVid");
+//
+//   popupVid.classList.toggle("active");
+//
+//   let video = document.getElementById("videoId");
+//   video.contentWindow.postMessage(
+//     '{"event":"command", "func":"destroy", "args":""}',
+//     "*"
+//   );
+// }
 
 function toggleAppQuiz() {
   document.getElementById("videoId").src =
@@ -161,7 +159,7 @@ function toggleMorphFilter() {
 // ANCHOR SCROLL
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
+  anchor.addEventListener("click", function(e) {
     e.preventDefault();
     document
       .querySelector(this.getAttribute("href"))
