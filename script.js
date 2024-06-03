@@ -10,7 +10,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
 //Refactor, use one function, pass the link
 function toggle() {
   document.getElementById("videoId").src =
@@ -21,7 +20,7 @@ function toggle() {
   let video = document.getElementById("videoId");
   video.contentWindow.postMessage(
     '{"event":"command", "func":"destroy", "args":""}',
-    "*"
+    "*",
   );
 }
 // Bandura
@@ -48,7 +47,7 @@ function toggleAppQuiz() {
   let video = document.getElementById("videoId");
   video.contentWindow.postMessage(
     '{"event":"command", "func":"destroy", "args":""}',
-    "*"
+    "*",
   );
 }
 
@@ -61,7 +60,7 @@ function toggleClipper() {
   let video = document.getElementById("videoId");
   video.contentWindow.postMessage(
     '{"event":"command", "func":"destroy", "args":""}',
-    "*"
+    "*",
   );
 }
 
@@ -74,7 +73,7 @@ function toggleUtility() {
   let video = document.getElementById("videoId");
   video.contentWindow.postMessage(
     '{"event":"command", "func":"destroy", "args":""}',
-    "*"
+    "*",
   );
 }
 
@@ -87,7 +86,7 @@ function toggleImager() {
   let video = document.getElementById("videoId");
   video.contentWindow.postMessage(
     '{"event":"command", "func":"destroy", "args":""}',
-    "*"
+    "*",
   );
 }
 
@@ -100,7 +99,7 @@ function toggleEchoDelay() {
   let video = document.getElementById("videoId");
   video.contentWindow.postMessage(
     '{"event":"command", "func":"destroy", "args":""}',
-    "*"
+    "*",
   );
 }
 
@@ -113,7 +112,7 @@ function toggleDjApp() {
   let video = document.getElementById("videoId");
   video.contentWindow.postMessage(
     '{"event":"command", "func":"destroy", "args":""}',
-    "*"
+    "*",
   );
 }
 
@@ -126,7 +125,7 @@ function toggleAudioPlayer() {
   let video = document.getElementById("videoId");
   video.contentWindow.postMessage(
     '{"event":"command", "func":"destroy", "args":""}',
-    "*"
+    "*",
   );
 }
 
@@ -139,27 +138,27 @@ function toggleModular() {
   let video = document.getElementById("videoId");
   video.contentWindow.postMessage(
     '{"event":"command", "func":"destroy", "args":""}',
-    "*"
+    "*",
   );
 }
 
 function toggleMorphFilter() {
   document.getElementById("videoId").src =
-    "https://www.youtube.com/embed/lpipNwaUZ7g";
+    "https://www.youtube.com/embed/bdbJ7XiYvKQ?";
   var popupVid = document.querySelector(".popupVid");
   popupVid.classList.toggle("active");
 
   let video = document.getElementById("videoId");
   video.contentWindow.postMessage(
     '{"event":"command", "func":"destroy", "args":""}',
-    "*"
+    "*",
   );
 }
 
 // ANCHOR SCROLL
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function(e) {
+  anchor.addEventListener("click", function (e) {
     e.preventDefault();
     document
       .querySelector(this.getAttribute("href"))
@@ -232,8 +231,8 @@ filtersEl.addEventListener("click", (e) => {
     projectEl2.style.transform = "scale(1)";
     projectEl3.style.opacity = "0";
     projectEl3.style.transform = "scale(0)";
-    projectEl4.style.opacity = "0";
-    projectEl4.style.transform = "scale(0)";
+    projectEl4.style.opacity = "1";
+    projectEl4.style.transform = "scale(1)";
     projectEl5.style.opacity = "0";
     projectEl5.style.transform = "scale(0)";
     projectEl6.style.opacity = "0";
@@ -256,13 +255,13 @@ filtersEl.addEventListener("click", (e) => {
     projectEl2.style.opacity = "0";
     projectEl2.style.transform = "scale(0)";
     projectEl3.style.opacity = "1";
-    projectEl3.style.transform = "scale(1)";
-    projectEl4.style.opacity = "1";
-    projectEl4.style.transform = "translate(0, -323px)";
+    projectEl3.style.transform = "translate(0, -500px)";
+    projectEl4.style.opacity = "0";
+    projectEl4.style.transform = "scale(0)";
     projectEl5.style.opacity = "1";
-    projectEl5.style.transform = "translate(0, -323px)";
+    projectEl5.style.transform = "translate(500px, -1042px)";
     projectEl6.style.opacity = "1";
-    projectEl6.style.transform = "scale(1)";
+    projectEl6.style.transform = "translate(0, -500px)";
     projectEl7.style.opacity = "0";
     projectEl7.style.transform = "scale(0)";
     projectEl8.style.opacity = "0";
